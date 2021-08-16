@@ -1,11 +1,8 @@
 public class ComputeWage{
 	public static final int IS_FULL_TIME= 2;
     public static final int IS_HALF_TIME =1;
-    public static final int WAGE_PER_HR =20;
-    public static final int DAY_IN_MONTH = 20;
-    public static final int MAX_HRS = 100;
 
-    public static void CalculateWage() {
+    ComputeWage(String companyName, int WAGE_PER_HR, int DAY_IN_MONTH, int MAX_HRS) {
     int empHrs = 0;
     int totalHrs = 0;
     int totalWorkingDays=0;
@@ -26,11 +23,11 @@ public class ComputeWage{
 	 }
      totalHrs+=empHrs;
      
-     System.out.println("total day:"+totalWorkingDays+"total hrs:"+totalHrs);
+     System.out.println("day :"+totalWorkingDays+" total hrs:"+totalHrs);
      
     }
     totalempwage=totalHrs*WAGE_PER_HR;
-    System.out.println(" total employee wage is:"+ totalempwage);
+    System.out.println(" total employee wage for "+companyName+" is "+ totalempwage);
     
 	}
 }
